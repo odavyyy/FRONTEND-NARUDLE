@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narutodle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Narutodle</h1>
+    <p class="subtitle">Quem é esse personagem?</p>
+
+    <div class="acoes">
+        <form id="form-palpite">
+            <div class="input-wrapper">
+                <input type="text" id="input-personagem" placeholder="Digite o nome do personagem" required autocomplete="off">
+                <ul id="lista-sugestoes" class="sugestoes"></ul>
+            </div>
+            <button type="submit">Palpitar</button>
+        </form>
+        <div class="botoes-controle">
+            <button id="btn-desistir" class="btn-secondary">Desistir</button>
+            <button id="btn-reset" class="btn-secondary">Novo Jogo</button>
+        </div>
+    </div>
+
+    <p id="erro" class="erro-msg"></p>
+
+    <div id="card" class="personagem-card">
+        <img id="img-personagem" src="" alt="Imagem do personagem">
+        <h2 id="nome-personagem" class="nome">????</h2>
+        <div class="detalhes">
+            <p><strong>Gênero:</strong> <span id="genero-personagem">?</span></p>
+            <p><strong>Clã:</strong> <span id="cla-personagem">?</span></p>
+            <p><strong>Vila:</strong> <span id="vila-personagem">?</span></p>
+        </div>
+        <p id="resultado"></p>
+    </div>
+
+    <div id="tabela-container">
+        <h3>Seus Palpites</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Personagem</th>
+                    <th>Gênero</th>
+                    <th>Clã</th>
+                    <th>Vila</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
